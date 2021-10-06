@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 img {
     padding: 20px; 
     margin-right: 10px; 
