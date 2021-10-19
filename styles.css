@@ -32,7 +32,6 @@ img {
     padding: 20px; 
     margin-right: 10px; 
     margin-bottom: 10px; 
-    outline: 1px solid rgb(114, 114, 114); 
     background: #f0f0f0; 
     height:42ex;
 }
@@ -45,6 +44,13 @@ img {
 
 .item_card {
     display: inline-block;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    padding: 5px;
+}
+
+.item_card:hover{
+    outline: 1px solid rgb(240, 4, 4);
 }
 
 .header_block {
