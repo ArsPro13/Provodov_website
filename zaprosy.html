@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">UPDATE user SET created_at = SUBSTR(created_at, 7, 4) || '-' || SUBSTR(created_at, 4,2) || '-' || SUBSTR(created_at, 1, 2);</p>
+<p class="p2"><br></p>
+<p class="p1">SELECT username, MAX(created_at) FROM user;</p>
+<p class="p2"><br></p>
+<p class="p1">SELECT DISTINCT(SUBSTR(created_at, 1, 4)) FROM user;</p>
+<p class="p2"><br></p>
+<p class="p1">SELECT COUNT(item_id) as 'number_of_items' FROM item;</p>
+<p class="p2"><br></p>
+<p class="p1">SELECT AVG(LENGTH('first_name')) as 'средняя длина имени пользователей, зарегистрировавшихся максимум 2 года назад' FROM user WHERE (SUBSTR(CURRENT_DATE, 0, 4)-SUBSTR(created_at, 0, 4)&lt;=2);</p>
+</body>
+</html>
