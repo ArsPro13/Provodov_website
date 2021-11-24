@@ -1,0 +1,9 @@
+UPDATE user SET created_at = SUBSTR(created_at, 7, 4) || '-' || SUBSTR(created_at, 4,2) || '-' || SUBSTR(created_at, 1, 2);
+
+SELECT username, MAX(created_at) FROM user;
+
+SELECT DISTINCT(SUBSTR(created_at, 1, 4)) FROM user;
+
+SELECT COUNT(item_id) as 'number_of_items' FROM item;
+
+SELECT AVG(LENGTH('first_name')) as 'средняя длина имени пользователей, зарегистрировавшихся максимум 2 года назад' FROM user WHERE created_at > date('now', '-2 years');
