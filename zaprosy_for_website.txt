@@ -1,0 +1,26 @@
+--выбор людей с заказами от определенной суммы
+
+SELECT 
+	(SELECT first_name FROM user WHERE user_id=user_id_ord) AS name,
+	(SELECT last_name FROM user WHERE user_id=user_id_ord) AS surname,
+	(SELECT adress FROM user WHERE user_id=user_id_ord) AS adress,
+	amount 
+FROM orders WHERE amount>=16;
+
+
+
+--выбор даты заказа и суммы заказов, сделанных из определенных городов
+
+SELECT 
+	(SELECT amount FROM orders WHERE user_id_ord=user_id) AS amount,
+	(SELECT created_at FROM orders WHERE user_id_ord=user_id) AS when_made,
+	adress
+FROM user WHERE (adress='london' or adress='LA');
+
+
+--выбор всех позиций из определенного заказа
+
+SELECT 
+	(SELECT item_name FROM item WHERE item_id=item_id_cart) AS item_name,
+	ord_id AS id_zakaza
+FROM cart_item WHERE ord_id=2;
