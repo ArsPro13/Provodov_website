@@ -31,8 +31,8 @@ class DataBase():
 
 
 class test(unittest.TestCase):
-    def lets_start(self):
-        self.__tempdb = DataBase(':memory')
+    def setUp(self):
+        self.__tempdb = DataBase(':memory:')
         self.__tempdb.get_cursor.executescript(
             '''
             BEGIN TRANSACTION;
@@ -88,7 +88,6 @@ class test(unittest.TestCase):
             INSERT INTO cart_item VALUES(2,2,1,16,2,2);
             INSERT INTO cart_item VALUES(3,3,1,17,3,3);
             INSERT INTO cart_item VALUES(2,2,1,17,4,3);
-            DELETE FROM sqlite_sequence;
             COMMIT;
             '''
         )
@@ -118,7 +117,7 @@ class test(unittest.TestCase):
         request = self.__tempdb.orders_info(id=3)
         self.assertEqual(1, len(request))
     
-    def fin(self):
+    def tearDown(self):
         self.__tempdb.get_session.close()
 
 if (__name__=='__main__'):
