@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style//style.css') }}">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div>
+        <header>
+            <img src="logo.png" class="header_block">
+            <h1 class="header_block">Розовый магазин</h1>
+            <a href="about_us.html" class="header_block">О нас</a>
+            <a href="catalog.html" class="header_block">Каталог</a>
+            <a href="start_page.html" class="header_block">Главное меню</a>
+        </header>
+        
+        {% block content %} {% endblock %}
+        
+        <footer>
+            ArsPro_13      Арсений Проводов      Vintbolt13@gmail.com
+        </footer>
+    </div>
+</body>
+
+</html>
