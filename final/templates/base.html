@@ -15,11 +15,11 @@
 
     <div>
         <header>
-            <img src="logo.png" class="header_block">
+            <img src="{{ url_for('static', filename='style/images/logo.png') }}" class="header_block">
             <h1 class="header_block">Розовый магазин</h1>
-            <a href="about_us.html" class="header_block">О нас</a>
-            <a href="catalog.html" class="header_block">Каталог</a>
-            <a href="start_page.html" class="header_block">Главное меню</a>
+            <a href="/about_us" class="header_block">О нас</a>
+            <a href="/catalog" class="header_block">Каталог</a>
+            <a href="/start_page" class="header_block">Главное меню</a>
         </header>
         
         {% block content %} {% endblock %}

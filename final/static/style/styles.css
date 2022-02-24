@@ -1,12 +1,12 @@
 body {
-    height: 100vh;
-    background-color: rgb(226, 162, 231);
+    height: 100%;
+    background-color: rgb(231, 218, 255);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: white"
 }
 
 header {
-    background-color: rgb(232, 189, 235);
+    background-color: rgb(46, 47, 58);
     color: rgb(252, 249, 252);
     font-size: 20px;
     height: 10ex;
@@ -14,11 +14,12 @@ header {
 }
 
 footer {
-    background-color: rgb(232, 189, 235);
+    background-color: rgb(46, 47, 58);
     color: rgb(252, 249, 252);
     text-align: center;
     font-size: 20px;
     height: 10ex;
+    flex: 0 0 auto;
 }
 
 a {
