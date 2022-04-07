@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Розовый магазин</title>
-    <link rel="stylesheet" href="style/styles.css">
-</head>
-
-<body>
-    <header>
-        <img src="final/static/style/logo.png" class="header_block">
-        <h1 class="header_block">Розовый магазин</h1>
-        <a href="about_us.html" class="header_block">О нас</a>
-        <a href="catalog.html" class="header_block">Каталог</a>
-        <a href="start_page.html" class="header_block">Главное меню</a>
-    </header>
+{% block content %}
     <div class="container">
         <br><h1 style="text-align: center;">Розовый магазин</h1>
         <br><br>
@@ -28,12 +10,7 @@
             <li>Вы можете найти у нас как тетради и карандаши, так и футболки и худи розового цвета</li>
             <li>Вы можете ознакомиться с каталогом товаров:</li>
         </ul>
-        <button style="font-size: 20px; height: 100px; width: 300px; border-radius: 10px; background-color: white;">Посмотреть каталог товаров</button>
+        <button style="font-size: 20px; height: 100px; width: 300px; border-radius: 10px; background-color: white;" onclick="document.location='/catalog'">Посмотреть каталог товаров</button>
         <br><br><br><br>
     </div>
-    <footer>
-        ArsPro_13      Арсений Проводов      Vintbolt13@gmail.com
-    </footer>
-</body>
-
-</html> 
+{% endblock %}

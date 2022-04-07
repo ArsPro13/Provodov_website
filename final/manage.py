@@ -15,6 +15,9 @@ def about_us():
 def catalog():
     return render_template("catalog.html")
 
+@app.route('/start_page')
+def start_page():
+    return render_template("start_page.html")
 
 
 
