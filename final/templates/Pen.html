@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="font-size: 30px">
+        <a style="font-size: 75px">Футболка 1</a><br><br>
+        <img class="item_card" src="{{ url_for('static', filename='style/images/Картинка1.png') }}" width="500px" height="500px">
+        <div class="item_card">
+            Данный товар отличается исключительным <br>удобством в использовании и <br>красотой во внешнем виде
+        </div>
+        
+        <br>
+        <br>
+        <button type="button" class="btn btn-success">Купить</button><br><br><br>
+    </div>
+{% endblock %}
